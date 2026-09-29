@@ -1,0 +1,24 @@
+{
+  "rules": [
+    {
+      "name": "Brute-force threshold",
+      "severity": "HIGH",
+      "logic": "4 or more failed logins for the same user/source IP within 120 seconds."
+    },
+    {
+      "name": "Success after repeated failures",
+      "severity": "CRITICAL",
+      "logic": "A successful login follows at least 3 recent failures for the same user/source IP."
+    },
+    {
+      "name": "Off-hours authentication",
+      "severity": "MEDIUM",
+      "logic": "Successful authentication before 06:00 or at/after 22:00."
+    },
+    {
+      "name": "PowerShell execution",
+      "severity": "MEDIUM",
+      "logic": "A PowerShell process starts on an endpoint; requires analyst context before escalation."
+    }
+  ]
+}
